@@ -22,7 +22,6 @@ provider "helm" {
   }
 }
 
-
 resource "kubernetes_namespace" "example" {
   metadata {
     name = "argo"
@@ -30,8 +29,8 @@ resource "kubernetes_namespace" "example" {
 }
 
 resource "helm_release" "argocd" {
-  chart      = "argo-cd"
   name       = "msur"
+  chart      = "argo-cd"
   repository = "https://argoproj.github.io/argo-helm"
   namespace  = "argo"
 }
