@@ -8,7 +8,7 @@ variable "kubernetes_cluster_name" {
   type = string
 }
 
-variable "kubernetes_id" {
+variable "kubernetes_cluster_id" {
   type = string
 }
 
